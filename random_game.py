@@ -4,7 +4,7 @@ import random
 import sys
 
 def check_guess(guess, correct_answer, start, end):
-    if start <= int(guess) <= end:
+    if start <= guess <= end:
         if guess == correct_answer:
                 return True
     else:
