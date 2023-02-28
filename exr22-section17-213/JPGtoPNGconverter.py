@@ -6,12 +6,12 @@ from PIL import Image, ImageFilter
 import sys
 import os
 
-try:
-    source_dir = sys.argv[1]
-    dest_dir = sys.argv[2]
-except IndexError:
+if len(sys.argv) != 3:
     print("Must enter 2 parameters.")
     exit()
+
+source_dir = sys.argv[1]
+dest_dir = sys.argv[2]
 
 if not (os.path.exists(source_dir)):
     print("The source path '" + source_dir + "' does not exist.")
